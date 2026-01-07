@@ -1,99 +1,208 @@
 # Jarvis_Virtual_assistant
+---
+![Python](https://img.shields.io/badge/Python-3.10+-blue?logo=python&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-Backend-black?logo=flask)
+![Gemini AI](https://img.shields.io/badge/Gemini%20AI-Google-blue?logo=google)
+![Speech Recognition](https://img.shields.io/badge/Speech%20Recognition-AI-green)
+![Text to Speech](https://img.shields.io/badge/Text--to--Speech-Pyttsx3-orange)
+![Web UI](https://img.shields.io/badge/Web%20UI-HTML%20%7C%20CSS%20%7C%20JS-red)
+![Status](https://img.shields.io/badge/Project-Active-success)
+![License](https://img.shields.io/badge/License-MIT-yellow)
 
 ---
 
-# 🤖 JARVIS: Advanced Virtual Assistant
+# 🤖 JARVIS – AI Voice Assistant with Web UI (Iron Man Style)
 
-**JARVIS** (Just A Rather Very Intelligent System) is a dual-interface voice assistant. It features a desktop-based automation script and a stunning, futuristic web interface inspired by Iron Man's Arc Reactor.
+JARVIS is a smart **AI-powered voice assistant** inspired by Iron Man’s JARVIS.
+It combines **Python, Flask, Gemini AI, Speech Recognition, and a futuristic web UI** with an animated Arc Reactor interface.
 
-## ✨ Features
-
-* **🎙️ Dual Mode Interaction**: Use the CLI via `main.py` for direct system control or the Web UI via `app.py`.
-* **🧠 Personal Memory**: Remembers your name and favorite programming language using `memory.json`.
-* **🎵 Smart Music Library**: Integrated playback for your favorite tracks (Radha, Perfect, Snowman, etc.) with partial match search.
-* **🌐 Web Automation**: Quick commands to open Google, YouTube, and LinkedIn.
-* **📰 Live News**: Fetches the top 5 global headlines on demand.
-* **🤖 Gemini AI Integration**: For queries not handled by local logic, JARVIS consults Google's Gemini Flash model for intelligent responses.
+This project supports **voice commands, AI conversations, memory storage, music playback, news fetching**, and works in **both Web UI and Desktop Voice mode**.
 
 ---
 
-## 🚀 Quick Start
+## 🚀 Features
 
-### 1. Prerequisites
+* 🎙️ **Voice Command Recognition** (Wake word: *Jarvis*)
+* 🧠 **AI Responses using Google Gemini API**
+* 🌐 **Web-based UI** with Iron Man–style Arc Reactor animation
+* 🔊 **Text-to-Speech Output** (Cleaned speech – no symbols spoken)
+* 🗂️ **Persistent Memory System**
 
-Ensure you have Python installed, then install the required dependencies:
+  * Remembers user name
+  * Remembers favorite programming language
+* 🎵 **Music Playback via YouTube**
+* 📰 **Live News Headlines (NewsAPI)**
+* 🔗 **Quick Commands**
+
+  * Open Google
+  * Open YouTube
+  * Open LinkedIn
+* 👨‍💻 **Dual Mode**
+
+  * Web-based Assistant
+  * Desktop Voice Assistant (Terminal-based)
+
+---
+
+## 🛠️ Tech Stack
+
+**Frontend**
+
+* HTML5
+* CSS3 (Animations & UI Effects)
+* JavaScript (Speech Recognition & Speech Synthesis)
+
+**Backend**
+
+* Python
+* Flask
+* Google Gemini AI
+* SpeechRecognition
+* Pyttsx3
+* NewsAPI
+
+---
+
+## 📁 Project Structure
+
+```
+JARVIS/
+│── app.py                # Flask web server
+│── jarvis_core.py        # Core AI logic & command processing
+│── main.py               # Desktop voice assistant
+│── musicLibrary.py       # Custom music database
+│── memory.json           # Persistent memory storage
+│── requirements.txt      # Project dependencies
+│
+├── templates/
+│   └── index.html        # Web UI (Arc Reactor + Voice UI)
+```
+
+---
+
+## ⚙️ Installation & Setup
+
+### 1️⃣ Clone the Repository
+
+```bash
+git clone https://github.com/your-username/jarvis-ai-assistant.git
+cd jarvis-ai-assistant
+```
+
+### 2️⃣ Create Virtual Environment (Recommended)
+
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
+
+### 3️⃣ Install Dependencies
 
 ```bash
 pip install -r requirements.txt
-
 ```
 
-### 2. Configuration
+---
 
-Open `jarvis_core.py` and ensure your API keys are set (or use environment variables):
+## 🔑 API Configuration
 
-* **NewsAPI**: Used for fetching headlines.
-* **Gemini API**: Powering the advanced AI reasoning.
+Update your API keys inside `jarvis_core.py`:
 
-### 3. Running JARVIS
+```python
+newsapi = "YOUR_NEWS_API_KEY"
+api_key = "YOUR_GEMINI_API_KEY"
+```
 
-You can run JARVIS in two ways:
+> ⚠️ **Do NOT expose API keys in public repositories**
+> Use environment variables for production.
 
-**Option A: The Web Interface (Recommended)**
+---
+
+## ▶️ Run the Project
+
+### 🌐 Web-Based JARVIS
 
 ```bash
 python app.py
-
 ```
 
-*Navigate to `http://127.0.0.1:5000` to see the animated Arc Reactor boot sequence.*
+Open browser:
 
-**Option B: The Desktop Assistant**
+```
+http://127.0.0.1:5000
+```
+
+### 🎧 Desktop Voice Assistant
 
 ```bash
 python main.py
-
 ```
 
-*Say **"Jarvis"** to wake him up and start giving commands.*
+Say **“Jarvis”** to activate 🎙️
 
 ---
 
-## 🛠️ Project Structure
+## 🗣️ Example Voice Commands
 
-| File | Description |
-| --- | --- |
-| `app.py` | Flask server hosting the web interface. |
-| `main.py` | Local voice recognition loop (Wake word: "Jarvis"). |
-| `jarvis_core.py` | The "Brain" containing command logic and AI processing. |
-| `musicLibrary.py` | Dictionary of songs and their YouTube links. |
-| `index.html` | Futuristic UI with CSS animations and Speech-to-Text. |
-| `memory.json` | Persistent storage for user preferences. |
-
----
-
-## ⌨️ Example Commands
-
-* **Identify Yourself**: *"My name is Upasana"* → *"What is my name?"*
-* **Music**: *"Play Snowman"* or *"Play Perfect"*
-* **Web**: *"Open YouTube"* or *"Open LinkedIn"*
-* **Knowledge**: *"How does quantum computing work?"* (Handled by Gemini AI)
-* **Updates**: *"Give me the news"*
+```
+Open Google
+Play perfect
+What's the news
+My name is Upasana
+What is my name
+My favorite language is Python
+What is my favorite language
+```
 
 ---
 
-## 🎨 UI Preview
+## 🧠 Memory System
 
-The web interface features a custom **Boot Sequence** that checks system modules before initializing the voice interface. The Arc Reactor pulses rhythmically and speeds up when JARVIS is actively "listening" to your commands.
+JARVIS stores user information in `memory.json`:
+
+```json
+{
+  "name": "Upasana",
+  "favorite_language": "Python"
+}
+```
+
+Memory persists even after restarting the application.
 
 ---
 
-## 🤝 Contributing
+## 📸 UI Preview
 
-Feel free to fork this project, add new songs to `musicLibrary.py`, or expand the `processCommand` logic in `jarvis_core.py` to support more automation!
+✨ Arc Reactor Animation
+✨ Boot-up Sequence
+✨ Voice Listening & Processing Effects
 
-**Developed by Upasana**
+*(Inspired by Iron Man’s JARVIS)*
 
 ---
 
+## 🧩 Future Enhancements
 
+* Emotion-based reactions (Happy / Alert / Neutral)
+* Male/Female voice selection
+* Authentication system
+* Cloud deployment
+* Mobile-friendly UI
+* Command history & analytics
+
+---
+
+## 👩‍💻 Author
+
+**Upasana Prajapati**
+🎓 BCA | Data Science | AI & Python Developer
+🔗 [LinkedIn](https://www.linkedin.com/in/upasana-prajapati)
+
+---
+
+## ⭐ Support
+
+If you like this project, please ⭐ star the repository
+and feel free to fork & contribute!
+
+---
