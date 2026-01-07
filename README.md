@@ -1,7 +1,5 @@
 # Jarvis_Virtual_assistant
 
-This is a comprehensive, interactive `README.md` designed for a GitHub repository. It includes visual elements, clear setup instructions, and highlights the specific features found in your code, such as the **Arc Reactor UI**, **Gemini AI integration**, and the **Music Library**.
-
 ---
 
 # 🤖 JARVIS: Advanced Virtual Assistant
@@ -98,4 +96,4 @@ Feel free to fork this project, add new songs to `musicLibrary.py`, or expand th
 
 ---
 
-**Would you like me to create a `.gitignore` file or a set of instructions on how to secure your API keys before uploading this to GitHub?**
+
