@@ -168,3 +168,14 @@ Upasana Prajapati
 
 If you like this project, please ⭐ star the repository
 and feel free to fork & contribute!
+📁 Project Structure
+JARVIS/
+│── app.py                # Flask web server
+│── jarvis_core.py        # Core AI logic & command processing
+│── main.py               # Desktop voice assistant
+│── musicLibrary.py       # Custom music database
+│── memory.json           # Persistent memory storage
+│── requirements.txt      # Project dependencies
+│
+├── templates/
+│   └── index.html        # Web UI (Arc Reactor + Voice UI)
