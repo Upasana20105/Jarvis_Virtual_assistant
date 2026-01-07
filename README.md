@@ -10,11 +10,6 @@
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 
 ---
-![GitHub stars](https://img.shields.io/github/stars/your-username/jarvis-ai-assistant?style=social)
-![GitHub forks](https://img.shields.io/github/forks/your-username/jarvis-ai-assistant?style=social)
-![GitHub repo size](https://img.shields.io/github/repo-size/your-username/jarvis-ai-assistant)
-
----
 
 # 🤖 JARVIS – AI Voice Assistant with Web UI (Iron Man Style)
 
