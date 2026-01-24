@@ -24,7 +24,7 @@ newsapi = "d95a530c53f44691b9172b1b50fd6f10"
 
 def aiProcess(command):
     client = genai.Client(
-        api_key="AIzaSyCFRko9EGiH5VJ9gEk7_zPlOuaGSeJhvQI",
+        api_key="WRITE_YOUR_OWN_API_KEY",
         http_options={'api_version': 'v1'}
     )
     response = client.models.generate_content(
@@ -114,3 +114,4 @@ def processCommand(command):
     else:
         memory = load_memory()
         return aiProcess(command)
+
